@@ -1,0 +1,50 @@
+shir_brosh
+316124767
+
+
+=============================
+=      File description     =
+=============================
+This exercise contains the following java classes:
+mainStorage - The father class for the Locker and LongTermStorage classes.
+Locker - The locker object class.
+LongTermStorage - The LongTermStorage object class.
+LockerTest - The tester for the Locker object class.
+LongTermTest - The tester for the LongTermStorage object class.
+SpaceshipDepositoryTest- the suit test for the Locker and LongTermStorage classes.
+BoopingSite- The BoopingSite object class.
+CompareByRating - The compare class that campers between hotels star rating.
+CompareByProximity - The compare class that campers between hotels distance to a given coordinate.
+BoopingSiteTest- The tester for the BoopingSite object class.
+
+=============================
+=          Design           =
+=============================
+Starship Depository:
+    I chose to use inheritance- the MainStorage class is the father class to the Locker and LongTermStorage
+    classes, it holds most of the required methods for each class. the addItem method is built in the MainStorage
+    class, and each of the Locker and LongTermStorage contains the method using super and applying each her specific
+    demands for adding an item.
+    In Locker as well as in LongTermStorage i chose to store the information in Map object in a way that the
+    key was the item itself and its matching value is the amount of items from the key's type. I preferred to
+    use this method because that way i can store the items that are in the Locker\LongTermStorage as well as
+    their amount, which makes it easier for me to save the information and operate functions on it.
+Hotel Search Engine:
+    In both compare by rating and location i chose to use the comparator interface as its easy to build and
+    use. I chose to execute the comparator in a separate class ro make it modular.
+
+=============================
+=  Implementation details   =
+=============================
+Starship Depository:
+    apart from the minimal API of this exercise i added the father class MainStorage as i described above, I
+    also added some auxiliary functions:
+    in Locker -
+        checkNewN - A method that helps the addItem method by calculating how many items should enter
+            the locker and how many should enter the storage.
+        isContradicting- This method checks if a given item has a contradicting item in the locker.
+    in BoopingSite-
+        listByCity- This method creates a List of all Hotel objects from the data set that are in the city city.
+
+
+
